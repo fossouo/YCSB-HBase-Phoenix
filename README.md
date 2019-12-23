@@ -1,9 +1,11 @@
 Performance Test YCSB : 
 
-create table usertable(YCSB_KEY VARCHAR(255) NOT NULL PRIMARY KEY, FIELD0 VARCHAR, FIELD1 VARCHAR, FIELD2 VARCHAR, FIELD3 VARCHAR,FIELD4 VARCHAR, FIELD5 VARCHAR,FIELD6 VARCHAR, FIELD7 VARCHAR,FIELD8 VARCHAR, FIELD9 VARCHAR) SALT_BUCKETS=8;
-Then number of salt bucket varies according to your cluster size. 
-create index idx1 on usertable(field0, field1) include(field8, field9);
-create index idx2 on usertable(field2, field3) include(field8, field9);
+create table usertable(YCSB_KEY VARCHAR(255) NOT NULL PRIMARY KEY, FIELD0 VARCHAR, FIELD1 VARCHAR, FIELD2 VARCHAR, FIELD3 VARCHAR,FIELD4 VARCHAR, FIELD5 VARCHAR,FIELD6 VARCHAR, FIELD7 VARCHAR,FIELD8 VARCHAR, FIELD9 VARCHAR) SALT_BUCKETS=8;  
+
+Then number of salt bucket varies according to your cluster size.  
+
+create index idx1 on usertable(field0, field1) include(field8, field9);  
+create index idx2 on usertable(field2, field3) include(field8, field9);  
 
 phoenix.properties
 db.driver=org.apache.phoenix.jdbc.PhoenixDriver
@@ -21,12 +23,12 @@ Launch Parameter :
 
 Workload A - 100k 
 
-OVERALL, RunTime(ms), 122121
-OVERALL, Throughput(ops/sec), 818.8599831314843
-TOTAL_GCS_PS_Scavenge, Count, 19
-TOTAL_GC_TIME_PS_Scavenge, Time(ms), 245
-TOTAL_GC_TIME_%_PS_Scavenge, Time(%), 0.20062069586721368
-TOTAL_GCS_PS_MarkSweep, Count, 2
+OVERALL, RunTime(ms), 122121  
+OVERALL, Throughput(ops/sec), 818.8599831314843  
+TOTAL_GCS_PS_Scavenge, Count, 19  
+TOTAL_GC_TIME_PS_Scavenge, Time(ms), 245  
+TOTAL_GC_TIME_%_PS_Scavenge, Time(%), 0.20062069586721368 
+TOTAL_GCS_PS_MarkSweep, Count, 2 
 TOTAL_GC_TIME_PS_MarkSweep, Time(ms), 68
 TOTAL_GC_TIME_%_PS_MarkSweep, Time(%), 0.055682478852940934
 TOTAL_GCs, Count, 21
