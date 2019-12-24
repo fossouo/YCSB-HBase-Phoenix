@@ -1,4 +1,4 @@
-Performance Test YCSB : 
+# Performance Test YCSB : 
 
 create table usertable(YCSB_KEY VARCHAR(255) NOT NULL PRIMARY KEY, FIELD0 VARCHAR, FIELD1 VARCHAR, FIELD2 VARCHAR, FIELD3 VARCHAR,FIELD4 VARCHAR, FIELD5 VARCHAR,FIELD6 VARCHAR, FIELD7 VARCHAR,FIELD8 VARCHAR, FIELD9 VARCHAR) SALT_BUCKETS=8;  
 
@@ -7,21 +7,22 @@ Then number of salt bucket varies according to your cluster size.
 create index idx1 on usertable(field0, field1) include(field8, field9);  
 create index idx2 on usertable(field2, field3) include(field8, field9);  
 
-phoenix.properties
+'phoenix.properties'
+
 db.driver=org.apache.phoenix.jdbc.PhoenixDriver
 db.url=jdbc:phoenix:dfossouoenelamis-2.vpc.cloudera.com:2181:/hbase
 jdbc.autocommit=false
 db.batchsize=1000
 
 
-Github Repository : 
+# Github Repository : 
 
 
-Launch Parameter : 
+'Launch Parameter :' 
 
 /usr/java/jdk1.8.0_162-cloudera/bin/java -cp /root/YCSB-master/jdbc/conf:/root/YCSB-master/jdbc/target/jdbc-binding-0.18.0-SNAPSHOT.jar:/root/.m2/repository/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1.jar:/root/.m2/repository/org/apache/htrace/htrace-core4/4.1.0-incubating/htrace-core4-4.1.0-incubating.jar:/root/.m2/repository/net/sourceforge/serp/serp/1.13.1/serp-1.13.1.jar:/root/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.4/HdrHistogram-2.1.4.jar:/root/.m2/repository/org/apache/openjpa/openjpa-jdbc/2.1.1/openjpa-jdbc-2.1.1.jar:/root/.m2/repository/org/apache/geronimo/specs/geronimo-jms_1.1_spec/1.1.1/geronimo-jms_1.1_spec-1.1.1.jar:/root/.m2/repository/org/apache/openjpa/openjpa-kernel/2.1.1/openjpa-kernel-2.1.1.jar:/root/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.4/jackson-core-asl-1.9.4.jar:/root/YCSB-master/core/target/core-0.18.0-SNAPSHOT.jar:/root/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar:/root/.m2/repository/commons-lang/commons-lang/2.4/commons-lang-2.4.jar:/root/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.4/jackson-mapper-asl-1.9.4.jar:/root/.m2/repository/org/apache/openjpa/openjpa-lib/2.1.1/openjpa-lib-2.1.1.jar:/root/.m2/repository/commons-pool/commons-pool/1.5.4/commons-pool-1.5.4.jar:/opt/cloudera/parcels/PHOENIX/lib/phoenix/phoenix-4.14.1-cdh5.16.2-thin-client.jar:/opt/cloudera/parcels/PHOENIX/lib/phoenix/phoenix-4.14.1-cdh5.16.2-client.jar:/etc/hadoop/conf:/etc/hive/conf:/etc/hbase/conf:/opt/cloudera/parcels/CDH/lib/hbase/lib/hbase-common-1.2.0-cdh5.16.2.jar:/etc/hbase/conf:/opt/cloudera/parcels/CDH/lib/hbase/lib/hbase-spark-1.2.0-cdh5.16.2.jar:/opt/cloudera/parcels/CDH/lib/hbase/lib/hbase-client-1.2.0-cdh5.16.2.jar:/opt/cloudera/parcels/CDH/lib/hbase/lib/hbase-protocol-1.2.0-cdh5.10.2.jar:/opt/cloudera/parcels/CDH/lib/hbase/lib/htrace-core-3.2.0-incubating.jar:/opt/cloudera/parcels/CDH/lib/hbase/lib/hbase-server-1.2.0-cdh5.16.2.jar site.ycsb.Client -db site.ycsb.db.JdbcDBClient -s -P workloads/workload{a-f} -P phoenix.properties -load
 
-Workload A - 100k 
+# Workload A - 100k 
 
 OVERALL, RunTime(ms), 122121  
 OVERALL, Throughput(ops/sec), 818.8599831314843  
@@ -55,7 +56,7 @@ UPDATE, 95thPercentileLatency(us), 54
 UPDATE, 99thPercentileLatency(us), 122  
 UPDATE, Return=OK, 50165  
 
-Workload B - 100k  
+# Workload B - 100k  
 
 OVERALL, RunTime(ms), 204484  
 OVERALL, Throughput(ops/sec), 489.03581698323586  
@@ -89,7 +90,7 @@ UPDATE, 95thPercentileLatency(us), 184
 UPDATE, 99thPercentileLatency(us), 292  
 UPDATE, Return=OK, 4921  
 
-Workload C - 100k  
+# Workload C - 100k  
 
 OVERALL, RunTime(ms), 217517  
 OVERALL, Throughput(ops/sec), 459.7341816961433  
@@ -116,7 +117,7 @@ CLEANUP, MaxLatency(us), 824
 CLEANUP, 95thPercentileLatency(us), 824  
 CLEANUP, 99thPercentileLatency(us), 824  
 
-Workload D - 100k  
+# Workload D - 100k  
 
 OVERALL, RunTime(ms), 207920  
 OVERALL, Throughput(ops/sec), 480.9542131589073  
@@ -151,7 +152,7 @@ INSERT, 99thPercentileLatency(us), 320
 INSERT, Return=OK, 5108  
 
 
-Workload E - 100k   
+# Workload E - 100k   
 
 OVERALL, RunTime(ms), 6060051  
 OVERALL, Throughput(ops/sec), 16.501511290911576  
@@ -186,7 +187,7 @@ SCAN, 99thPercentileLatency(us), 193663
 SCAN, Return=OK, 94938
 
 
-Workload F - 100k  
+# Workload F - 100k  
 
 OVERALL, RunTime(ms), 217893  
 OVERALL, Throughput(ops/sec), 458.9408562918497  
