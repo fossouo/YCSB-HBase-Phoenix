@@ -7,7 +7,7 @@ Then number of salt bucket varies according to your cluster size.
 create index idx1 on usertable(field0, field1) include(field8, field9);  
 create index idx2 on usertable(field2, field3) include(field8, field9);  
 
-'phoenix.properties'
+`phoenix.properties`
 
 db.driver=org.apache.phoenix.jdbc.PhoenixDriver
 db.url=jdbc:phoenix:dfossouoenelamis-2.vpc.cloudera.com:2181:/hbase
@@ -18,7 +18,7 @@ db.batchsize=1000
 # Github Repository : 
 
 
-'Launch Parameter :' 
+`Launch Parameter :` 
 
 /usr/java/jdk1.8.0_162-cloudera/bin/java -cp /root/YCSB-master/jdbc/conf:/root/YCSB-master/jdbc/target/jdbc-binding-0.18.0-SNAPSHOT.jar:/root/.m2/repository/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1.jar:/root/.m2/repository/org/apache/htrace/htrace-core4/4.1.0-incubating/htrace-core4-4.1.0-incubating.jar:/root/.m2/repository/net/sourceforge/serp/serp/1.13.1/serp-1.13.1.jar:/root/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.4/HdrHistogram-2.1.4.jar:/root/.m2/repository/org/apache/openjpa/openjpa-jdbc/2.1.1/openjpa-jdbc-2.1.1.jar:/root/.m2/repository/org/apache/geronimo/specs/geronimo-jms_1.1_spec/1.1.1/geronimo-jms_1.1_spec-1.1.1.jar:/root/.m2/repository/org/apache/openjpa/openjpa-kernel/2.1.1/openjpa-kernel-2.1.1.jar:/root/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.4/jackson-core-asl-1.9.4.jar:/root/YCSB-master/core/target/core-0.18.0-SNAPSHOT.jar:/root/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar:/root/.m2/repository/commons-lang/commons-lang/2.4/commons-lang-2.4.jar:/root/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.4/jackson-mapper-asl-1.9.4.jar:/root/.m2/repository/org/apache/openjpa/openjpa-lib/2.1.1/openjpa-lib-2.1.1.jar:/root/.m2/repository/commons-pool/commons-pool/1.5.4/commons-pool-1.5.4.jar:/opt/cloudera/parcels/PHOENIX/lib/phoenix/phoenix-4.14.1-cdh5.16.2-thin-client.jar:/opt/cloudera/parcels/PHOENIX/lib/phoenix/phoenix-4.14.1-cdh5.16.2-client.jar:/etc/hadoop/conf:/etc/hive/conf:/etc/hbase/conf:/opt/cloudera/parcels/CDH/lib/hbase/lib/hbase-common-1.2.0-cdh5.16.2.jar:/etc/hbase/conf:/opt/cloudera/parcels/CDH/lib/hbase/lib/hbase-spark-1.2.0-cdh5.16.2.jar:/opt/cloudera/parcels/CDH/lib/hbase/lib/hbase-client-1.2.0-cdh5.16.2.jar:/opt/cloudera/parcels/CDH/lib/hbase/lib/hbase-protocol-1.2.0-cdh5.10.2.jar:/opt/cloudera/parcels/CDH/lib/hbase/lib/htrace-core-3.2.0-incubating.jar:/opt/cloudera/parcels/CDH/lib/hbase/lib/hbase-server-1.2.0-cdh5.16.2.jar site.ycsb.Client -db site.ycsb.db.JdbcDBClient -s -P workloads/workload{a-f} -P phoenix.properties -load
 
