@@ -1,5 +1,16 @@
 # Performance Test YCSB : 
 
+Java 1.8 & HBase conf : 
+
+`export HBASE_CONF_DIR=/etc/hbase/conf
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.232.b09-0.el7_7.x86_64
+export PATH=$PATH:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.232.b09-0.el7_7.x86_64/bin`
+
+
+If kerberized cluster load your keytab. 
+
+
+
 create table usertable(YCSB_KEY VARCHAR(255) NOT NULL PRIMARY KEY, FIELD0 VARCHAR, FIELD1 VARCHAR, FIELD2 VARCHAR, FIELD3 VARCHAR,FIELD4 VARCHAR, FIELD5 VARCHAR,FIELD6 VARCHAR, FIELD7 VARCHAR,FIELD8 VARCHAR, FIELD9 VARCHAR) SALT_BUCKETS=8;  
 
 Then number of salt bucket varies according to your cluster size.  
