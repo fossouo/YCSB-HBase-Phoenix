@@ -24,12 +24,12 @@ If kerberized cluster load your keytab.
 
 
 
-create table usertable(YCSB_KEY VARCHAR(255) NOT NULL PRIMARY KEY, FIELD0 VARCHAR, FIELD1 VARCHAR, FIELD2 VARCHAR, FIELD3 VARCHAR,FIELD4 VARCHAR, FIELD5 VARCHAR,FIELD6 VARCHAR, FIELD7 VARCHAR,FIELD8 VARCHAR, FIELD9 VARCHAR) SALT_BUCKETS=8;  
+`create table usertable(YCSB_KEY VARCHAR(255) NOT NULL PRIMARY KEY, FIELD0 VARCHAR, FIELD1 VARCHAR, FIELD2 VARCHAR, FIELD3 VARCHAR,FIELD4 VARCHAR, FIELD5 VARCHAR,FIELD6 VARCHAR, FIELD7 VARCHAR,FIELD8 VARCHAR, FIELD9 VARCHAR) SALT_BUCKETS=8;`    
 
 Then number of salt bucket varies according to your cluster size.  
 
-create index idx1 on usertable(field0, field1) include(field8, field9);  
-create index idx2 on usertable(field2, field3) include(field8, field9);  
+`create index idx1 on usertable(field0, field1) include(field8, field9);`    
+`create index idx2 on usertable(field2, field3) include(field8, field9);`    
 
 phoenix.properties
 
