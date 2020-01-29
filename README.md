@@ -12,12 +12,12 @@ export PATH=$PATH:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.232.b09-0.el7_7.x86_64/b
 
 Copy hbase-site.xml in each project folder :  
 
-cp /etc/hbase/conf/hbase-site.xml /root/YCSB-HBase-Phoenix/asynchbase/src/test/resources/hbase-site.xml
-cp /etc/hbase/conf/hbase-site.xml /root/YCSB-HBase-Phoenix/asynchbase/target/test-classes/hbase-site.xml
-cp /etc/hbase/conf/hbase-site.xml /root/YCSB-HBase-Phoenix/hbase10/src/test/resources/hbase-site.xml
-cp /etc/hbase/conf/hbase-site.xml /root/YCSB-HBase-Phoenix/hbase12/src/test/resources/hbase-site.xml
-cp /etc/hbase/conf/hbase-site.xml /root/YCSB-HBase-Phoenix/hbase14/src/test/resources/hbase-site.xml
-cp /etc/hbase/conf/hbase-site.xml /root/YCSB-HBase-Phoenix/hbase20/src/test/resources/hbase-site.xml
+cp /etc/hbase/conf/hbase-site.xml /root/YCSB-HBase-Phoenix/asynchbase/src/test/resources/hbase-site.xml   
+cp /etc/hbase/conf/hbase-site.xml /root/YCSB-HBase-Phoenix/asynchbase/target/test-classes/hbase-site.xml   
+cp /etc/hbase/conf/hbase-site.xml /root/YCSB-HBase-Phoenix/hbase10/src/test/resources/hbase-site.xml   
+cp /etc/hbase/conf/hbase-site.xml /root/YCSB-HBase-Phoenix/hbase12/src/test/resources/hbase-site.xml   
+cp /etc/hbase/conf/hbase-site.xml /root/YCSB-HBase-Phoenix/hbase14/src/test/resources/hbase-site.xml   
+cp /etc/hbase/conf/hbase-site.xml /root/YCSB-HBase-Phoenix/hbase20/src/test/resources/hbase-site.xml   
 
 
 If kerberized cluster load your keytab. 
