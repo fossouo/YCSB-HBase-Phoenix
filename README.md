@@ -45,6 +45,8 @@ Launch Parameter :
 
 # Workload A - 100k 
 
+./bin/ycsb load jdbc -s -P workloads/workloada -P phoenix-thin.properties   
+
 OVERALL, RunTime(ms), 122121  
 OVERALL, Throughput(ops/sec), 818.8599831314843  
 TOTAL_GCS_PS_Scavenge, Count, 19  
@@ -78,6 +80,8 @@ UPDATE, 99thPercentileLatency(us), 122
 UPDATE, Return=OK, 50165  
 
 # Workload B - 100k  
+
+./bin/ycsb load jdbc -s -P workloads/workloadb -P phoenix-thin.properties   
 
 OVERALL, RunTime(ms), 204484  
 OVERALL, Throughput(ops/sec), 489.03581698323586  
@@ -113,6 +117,8 @@ UPDATE, Return=OK, 4921
 
 # Workload C - 100k  
 
+./bin/ycsb load jdbc -s -P workloads/workloadc -P phoenix-thin.properties   
+
 OVERALL, RunTime(ms), 217517  
 OVERALL, Throughput(ops/sec), 459.7341816961433  
 TOTAL_GCS_PS_Scavenge, Count, 34  
@@ -139,6 +145,8 @@ CLEANUP, 95thPercentileLatency(us), 824
 CLEANUP, 99thPercentileLatency(us), 824  
 
 # Workload D - 100k  
+
+./bin/ycsb load jdbc -s -P workloads/workloadd -P phoenix-thin.properties   
 
 OVERALL, RunTime(ms), 207920  
 OVERALL, Throughput(ops/sec), 480.9542131589073  
@@ -175,6 +183,8 @@ INSERT, Return=OK, 5108
 
 # Workload E - 100k   
 
+./bin/ycsb load jdbc -s -P workloads/workloade -P phoenix-thin.properties   
+
 OVERALL, RunTime(ms), 6060051  
 OVERALL, Throughput(ops/sec), 16.501511290911576  
 TOTAL_GCS_PS_Scavenge, Count, 4026  
@@ -209,6 +219,8 @@ SCAN, Return=OK, 94938
 
 
 # Workload F - 100k  
+
+./bin/ycsb load jdbc -s -P workloads/workloadf -P phoenix-thin.properties   
 
 OVERALL, RunTime(ms), 217893  
 OVERALL, Throughput(ops/sec), 458.9408562918497  
