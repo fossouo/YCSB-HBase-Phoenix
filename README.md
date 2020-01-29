@@ -1,5 +1,9 @@
 # Performance Test YCSB : 
 
+Install Maven using the below settings : 
+
+`https://gist.github.com/fossouo/75da8b09125b214c63a4284a1c30cc40`
+
 Java 1.8 & HBase conf : 
 
 `export HBASE_CONF_DIR=/etc/hbase/conf  
