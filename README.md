@@ -33,10 +33,10 @@ create index idx2 on usertable(field2, field3) include(field8, field9);
 
 phoenix.properties
 
-`db.driver=org.apache.phoenix.jdbc.PhoenixDriver  
-db.url=jdbc:phoenix:dfossouoenelamis-2.vpc.cloudera.com:2181:/hbase  
-jdbc.autocommit=false  
-db.batchsize=1000`
+`db.driver=org.apache.phoenix.jdbc.PhoenixDriver`    
+`db.url=jdbc:phoenix:dfossouoenelamis-2.vpc.cloudera.com:2181:/hbase`     
+`jdbc.autocommit=false`  
+`db.batchsize=1000`   
 
 
 Launch Parameter :
